@@ -1,0 +1,65 @@
+.container-DataTable {
+    overflow: scroll;
+    max-height: 400px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    max-width: 1050px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: lightgray;
+}
+
+
+table,
+td,
+th {
+    border: 1px solid;
+}
+
+th {
+    width: 900px;
+    text-align: center;
+}
+
+.tableHeader {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    cursor: pointer;
+    width: 899vw;
+}
+
+.tableCell {
+    padding: 8px;
+    text-align: left;
+}
+
+.row:hover {
+    background-color: rgba(86, 86, 173, 0.413);
+}
+
+.arrow {
+    margin-left: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.arrow:hover {}
+
+.asc {
+    background: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.pngfind.com%2Fpngs%2Fpng-sort-up-arrow-icon-1381238.png&imgrefurl=https%3A%2F%2Fwww.pngfind.com%2Fsearch%2Fsort-up-arrow-icon%2F&tbnid=kR1K-i5qIeU-GM&vet=12ahUKEwiH8ueExc6IAxV8zTgGHUIJDZMQM3oFCIgBEAA..i&w=512&h=512&q=up%20arrow%20icon&hl=en&safe=off&sa=X&ved=2ahUKEwiH8ueExc6IAxV8zTgGHUIJDZMQM3oFCIgBEAA&cref=https://www.pngfind.com/pngs/detail/28-282677_up-arrow-icon-png.html');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+}

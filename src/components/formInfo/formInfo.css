@@ -1,0 +1,243 @@
+.form-elements {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.form-field {
+    margin-bottom: 2px;
+}
+
+.form-field-accountName {
+    grid-column: 1 / span 2;
+}
+
+.form-field-address {
+    grid-column: 1 / span 3;
+}
+
+.form-field-accountConvenience {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-label {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: right;
+
+}
+
+.form-input-accountType {
+    margin-right: 20px;
+    width: 180px;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 3px;
+}
+
+.form-input-deposit,
+.form-input-commission,
+.form-input-sweatCommission,
+.form-input-accountSheetNumber,
+.form-input-accountRoute {
+    width: 80px;
+}
+
+.form-field-deposit,
+.form-field-commission,
+.form-field-sweatCommission,
+.form-field-accountSheetNumber,
+.form-field-accountRoute,
+.form-field-accountTypeRadio,
+.form-field-accountMemberTypeRadio {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    justify-items: start;
+}
+
+.form-label-accountTypeRadio,
+.form-label-accountMemberTypeRadio {
+    grid-column: 1 / span 2;
+}
+
+.form-label-accountTypeRadio,
+.form-radio-groupaccountTypeRadio {
+    padding: 0px 18px 0px 18px;
+}
+
+.form-label-accountMemberTypeRadio,
+.form-radio-groupaccountMemberTypeRadio {
+    padding: 0px 10px 0px 10px;
+}
+
+.form-field-accountMemberTypeRadio {
+    background: linear-gradient(to bottom right,
+            rgba(206, 206, 175, 0.938),
+            rgba(243, 161, 9, 0.409));
+    border-radius: 0px 6px 6px 0px;
+}
+
+.form-field-accountTypeRadio {
+    background: linear-gradient(to bottom right,
+            rgba(231, 231, 190, 0.938),
+            rgba(243, 161, 9, 0.438));
+    border-radius: 6px 0px 0px 6px;
+}
+
+.form-field-accountName,
+.form-field-address {
+    margin-left: 52px;
+}
+
+.form-input-accountName,
+.form-input-accountNameEnglish {
+    width: 230px;
+}
+
+.form-input-address {
+    width: 677px;
+}
+
+.form-input-accountPhone,
+.form-input-accountVillage,
+.form-input-accountTaluka,
+.form-input-accountDistrict {
+    max-width: 200px;
+}
+
+.form-field-accountnumber {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.form-input-accountStatus,
+.form-input-accountCaste,
+.form-input-accountSex {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #b6b6b6;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background: linear-gradient(to bottom right,
+            rgb(245 245 240 / 59%),
+            rgba(231, 231, 224, 0.938),
+            #bebbba);
+    font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+    .form-elements {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .form-elements {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+        align-items: center;
+        justify-items: end;
+        align-content: center;
+    }
+
+    .form-field-address {
+        grid-column: 1 / span 1;
+    }
+
+    .form-field-accountName,
+    .form-field-address {
+        margin-left: -10px;
+    }
+
+    .form-field-accountName {
+        grid-column: 1 / span 1;
+    }
+
+    .form-input-accountStatus,
+    .form-input-accountCaste,
+    .form-input-accountSex {
+        width: 150px;
+    }
+
+    .form-input-accountName,
+    .form-input-accountNameEnglish {
+        width: 200px;
+    }
+
+    .form-input-address {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-elements {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: start;
+        align-items: center;
+        justify-items: end;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-elements {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: start;
+        align-items: center;
+        justify-items: end;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-elements {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: start;
+        align-items: center;
+        justify-items: end;
+        align-content: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .form-elements {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: start;
+        align-items: center;
+        justify-items: end;
+        align-content: center;
+    }
+}
