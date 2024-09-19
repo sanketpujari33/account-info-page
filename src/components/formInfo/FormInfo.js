@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './formInfo.css';
+import ContainerButtons from '../containerButtons/ContainerButtons';
 
 function FormInfo() {
 
@@ -146,6 +147,7 @@ function FormInfo() {
                     </form >
                 </div >
             </div>
+            <ContainerButtons />
         </>
     );
 }

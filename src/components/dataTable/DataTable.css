@@ -1,6 +1,6 @@
 .dataTable {
     background-color: aliceblue;
-    max-width: 1090px;
+    max-width: 98vw;
     height: 100%;
     margin-left: 10px;
     border: 2px solid #ccc;
@@ -61,8 +61,6 @@ th {
     cursor: pointer;
 }
 
-.arrow:hover {}
-
 .asc {
     background: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.pngfind.com%2Fpngs%2Fpng-sort-up-arrow-icon-1381238.png&imgrefurl=https%3A%2F%2Fwww.pngfind.com%2Fsearch%2Fsort-up-arrow-icon%2F&tbnid=kR1K-i5qIeU-GM&vet=12ahUKEwiH8ueExc6IAxV8zTgGHUIJDZMQM3oFCIgBEAA..i&w=512&h=512&q=up%20arrow%20icon&hl=en&safe=off&sa=X&ved=2ahUKEwiH8ueExc6IAxV8zTgGHUIJDZMQM3oFCIgBEAA&cref=https://www.pngfind.com/pngs/detail/28-282677_up-arrow-icon-png.html');
     background-repeat: no-repeat;
@@ -72,4 +70,11 @@ th {
     margin: 0;
     border: none;
     outline: none;
+}
+
+
+@media (max-width: 1200px) {
+    .dataTable {
+        /* max-width: 90vw; */
+    }
 }

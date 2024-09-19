@@ -4,7 +4,6 @@ import SidebarMenu from '../../components/sidebarMenu/SidebarMenu'
 import FormInfo from '../../components/formInfo/FormInfo'
 import DataTable from '../../components/dataTable/DataTable'
 import { data } from '../../data'
-import ContainerButtons from '../../components/containerButtons/ContainerButtons';
 import ContainerButtonsFooter from '../../components/containerButtons/ContainerButtonsFooter';
 export default function AcountInfo() {
     const [searchCode, setSearchCode] = useState('');
@@ -22,11 +21,11 @@ export default function AcountInfo() {
                 <div className='left-side'>
                     <div className='heading'>खाते माहिती</div>
                     <FormInfo />
-                    <ContainerButtons />
+
                     <DataTable data={data} />
                 </div>
             </div >
-            <ContainerButtonsFooter />
+
         </>
     )
 }

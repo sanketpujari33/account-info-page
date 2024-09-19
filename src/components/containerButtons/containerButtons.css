@@ -43,7 +43,7 @@ button:hover {
     background-color: #999999;
     cursor: pointer;
     transition: background-color 0.3s;
-    color: white;
+    color: rgb(9, 9, 9);
     border: 1px solid #999999;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -67,7 +67,6 @@ button:hover {
 }
 
 .footer {
-    background-color: #cccccc5d;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -118,11 +117,7 @@ button:hover {
     padding: 10px;
 }
 
-@media (max-width: 1200px) {
-    .dataTable {
-        max-width: 90vw;
-    }
-}
+
 
 @media (max-width: 576px) {
     button {

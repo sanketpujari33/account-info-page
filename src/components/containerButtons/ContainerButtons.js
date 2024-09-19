@@ -69,6 +69,7 @@ export default function ContainerButtons() {
                 <input
                     type="text"
                     value={inputValue3}
+                    placeholder='डिसीट करा'
                     onChange={(e) => setInputValue3(e.target.value)}
                 />
             </div>
