@@ -45,68 +45,79 @@ export default function SidebarMenu() {
     };
 
     return (
-        <div className="container-sidebar">
-            <div className="checkboxes">
-                <div className="check">
-                    <input
-                        type="checkbox"
-                        id="checkbox1"
-                        checked={checkboxes.checkbox1}
-                        onChange={handleCheckboxChange}
-                    />
-                    <label htmlFor="checkbox1">सर्व कपाती वीरक्षक बाकी दाखवणे बंद</label>
+        <>
+            <div className="header"></div>
+            <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
+            <label htmlFor="openSidebarMenu" className="sidebarIconToggle">
+                <div className="spinner diagonal part-1"></div>
+                <div className="spinner horizontal"></div>
+                <div className="spinner diagonal part-2"></div>
+            </label>
+            <div id="sidebarMenu">
+                <div className="container-sidebar">
+                    <div className="checkboxes">
+                        <div className="check">
+                            <input
+                                type="checkbox"
+                                id="checkbox1"
+                                checked={checkboxes.checkbox1}
+                                onChange={handleCheckboxChange}
+                            />
+                            <label htmlFor="checkbox1">सर्व कपाती वीरक्षक बाकी दाखवणे बंद</label>
+                        </div>
+
+                        <div className="check">
+                            <input
+                                type="checkbox"
+                                id="checkbox2"
+                                checked={checkboxes.checkbox2}
+                                onChange={handleCheckboxChange}
+                            />
+                            <label htmlFor="checkbox2">अनागत शिल्लक बाकी दाखवणे बंद</label>
+                        </div>
+                        <div className="check">
+                            <input
+                                type="checkbox"
+                                id="checkbox3"
+                                checked={checkboxes.checkbox3}
+                                onChange={handleCheckboxChange}
+                            />
+                            <label htmlFor="checkbox3">अडव्हान्स शिल्लक बाकी दासवणे बंद</label>
+                        </div>
+
+
+
+                    </div>
+
+                    <div className="list">
+                        <ul>
+                            {listItems.map((item) => (
+                                <li key={item.id}>
+                                    <a href={item.href}>{item.label}</a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <button className="upload-button">Upload For Mobile App</button>
+
+                    <div className="footer__form">
+                        <button
+                            className="footer__form-btn"
+                            onClick={handleSave}
+                        >
+                            From
+                        </button>
+                        <button
+                            className="footer__save-btn"
+                            onClick={handleSave}
+                        >
+                            SAVE
+                        </button>
+                        <input type="text" className='footer__name-input' />
+                    </div>
                 </div>
-
-                <div className="check">
-                    <input
-                        type="checkbox"
-                        id="checkbox2"
-                        checked={checkboxes.checkbox2}
-                        onChange={handleCheckboxChange}
-                    />
-                    <label htmlFor="checkbox2">अनागत शिल्लक बाकी दाखवणे बंद</label>
-                </div>
-                <div className="check">
-                    <input
-                        type="checkbox"
-                        id="checkbox3"
-                        checked={checkboxes.checkbox3}
-                        onChange={handleCheckboxChange}
-                    />
-                    <label htmlFor="checkbox3">अडव्हान्स शिल्लक बाकी दासवणे बंद</label>
-                </div>
-
-
-
             </div>
-
-            <div className="list">
-                <ul>
-                    {listItems.map((item) => (
-                        <li key={item.id}>
-                            <a href={item.href}>{item.label}</a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-
-            <button className="upload-button">Upload For Mobile App</button>
-
-            <div className="footer__form">
-                <button
-                    className="footer__form-btn"
-                    onClick={handleSave}
-                >
-                    From
-                </button>
-                <button
-                    className="footer__save-btn"
-                    onClick={handleSave}
-                >
-                    SAVE
-                </button>
-                <input type="text" className='footer__name-input' />
-            </div>
-        </div>
+        </>
     )
 }

@@ -1,3 +1,13 @@
+.dataTable {
+    background-color: aliceblue;
+    max-width: 1090px;
+    height: 100%;
+    margin-left: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
 .container-DataTable {
     overflow: scroll;
     max-height: 400px;
