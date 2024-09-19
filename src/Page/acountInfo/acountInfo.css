@@ -95,6 +95,13 @@ button {
     margin-left: 10px;
 }
 
+.footer__Clear-btn {
+    width: 90px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
 .footer {
     background-color: #cccccc5d;
     display: flex;
@@ -192,6 +199,7 @@ button {
         align-items: center;
         justify-content: center;
     }
+
 
     .footer__input-1 {
         width: 100px;
