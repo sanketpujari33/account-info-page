@@ -51,7 +51,20 @@ label {
     margin: 5px;
 }
 
-.from-input {
-    width: 80px;
+.footer__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer__name-input {
+    width: 90px;
     margin: 2px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+
 }

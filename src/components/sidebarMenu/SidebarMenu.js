@@ -105,7 +105,7 @@ export default function SidebarMenu() {
                 >
                     SAVE
                 </button>
-                <input type="text" />
+                <input type="text" className='footer__name-input' />
             </div>
         </div>
     )
