@@ -1,29 +1,14 @@
 import React, { useState } from 'react';
 import './containerButtons.css'
 
-export default function ContainerButtons() {
+export default function ContainerButtons({ handlePrev, handleNext, handleNew, handleSave, handleResets }) {
     const [inputValue1, setInputValue1] = useState('');
     const [inputValue2, setInputValue2] = useState('');
     const [inputValue3, setInputValue3] = useState('');
     const [isDirectDebit, setIsDirectDebit] = useState(false);
 
-    const handlePrev = () => {
-        console.log('Previous button clicked');
-    };
-
-    const handleNext = () => {
-        console.log('Next button clicked');
-    };
-
-    const handleNew = () => {
-        console.log('New button clicked');
-    };
-
-    const handleSave = () => {
-        console.log('Save button clicked');
-    };
-
     const handleReset = () => {
+        handleResets();
         setInputValue1('');
         setInputValue2('');
         setInputValue3('');

@@ -3,7 +3,6 @@ import './formInfo.css';
 import ContainerButtons from '../containerButtons/ContainerButtons';
 
 function FormInfo() {
-
     const [formData, setFormData] = useState({
         accountNumbers: '',
         accountConvenience: false,
@@ -36,14 +35,90 @@ function FormInfo() {
         accountSex: ''
     });
 
+    const [records, setRecords] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(-1);
+
     const handleInputChange = (event) => {
+        console.log("Input Chsnge");
         const { name, value, type, checked } = event.target;
         const newValue = type === 'checkbox' ? checked : value;
         setFormData((prevFormData) => ({ ...prevFormData, [name]: newValue }));
+        console.log(formData);
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const handlePrev = () => {
+        console.log('handlePrev');
+        if (currentIndex > 0) {
+            setCurrentIndex(currentIndex - 1);
+            setFormData(records[currentIndex - 1]);
+        }
+        console.log(formData);
+    };
+
+    const handleNext = () => {
+        console.log('handleNext');
+        if (currentIndex < records.length - 1) {
+            setCurrentIndex(currentIndex + 1);
+            setFormData(records[currentIndex + 1]);
+        }
+        console.log(formData);
+    };
+
+    const handleNew = () => {
+        setFormData({
+            accountNumbers: '',
+            accountConvenience: false,
+            accountType: '',
+            deposit: '',
+            accountName: '',
+            accountNameEnglish: '',
+            commission: '',
+            address: '',
+            sweatCommission: '',
+            memberNo: '',
+            accountDate: '',
+            accountMobile: '',
+            accountRoute: '',
+            accountPhone: '',
+            accountVillage: '',
+            accountTaluka: '',
+            accountDistrict: '',
+            accountTypeRadio: '',
+            accountMemberTypeRadio: '',
+            aadhaarnumber: '',
+            accountSheetNumber: '',
+            accountGst: '',
+            accountStatus: '',
+            accountCaste: '',
+            accountnumber: '',
+            accountBank: '',
+            accountEmail: '',
+            accountAge: '',
+            accountSex: ''
+        });
+        setCurrentIndex(-1);
+    };
+
+    const handleSave = () => {
+        console.log('handleSave');
+        const updatedRecords = [...records];
+        if (currentIndex === -1) {
+            updatedRecords.push(formData);
+        } else {
+            updatedRecords[currentIndex] = formData;
+        }
+        setRecords(updatedRecords);
+        setCurrentIndex(updatedRecords.length - 1);
+        console.log(formData);
+    };
+
+    const handleReset = () => {
+        console.log('handleReset');
+        if (currentIndex !== -1) {
+            setFormData(records[currentIndex]);
+        } else {
+            handleNew();
+        }
         console.log(formData);
     };
 
@@ -83,7 +158,7 @@ function FormInfo() {
         <>
             <div className='forms'>
                 <div className="form-container form-content">
-                    <form className="form-elements" onSubmit={handleSubmit}>
+                    <form className="form-elements" onSubmit={handleSave}>
                         {formFields.map((field) => (
                             <div key={field.name} className={`form-field form-field-${field.name}`}>
                                 <label htmlFor={field.name} className={`form-label  form-label-${field.name}`}>
@@ -142,14 +217,18 @@ function FormInfo() {
                                     )
                                 }
                             </div>
-                        ))
-                        }
-                    </form >
-                </div >
+                        ))}
+                    </form>
+                </div>
             </div>
-            <ContainerButtons />
+            <ContainerButtons
+                handlePrev={handlePrev}
+                handleNext={handleNext}
+                handleNew={handleNew}
+                handleSave={handleSave}
+                handleResets={handleReset}
+            />
         </>
     );
 }
-
 export default FormInfo;
