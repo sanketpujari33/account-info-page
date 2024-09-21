@@ -5,7 +5,7 @@ export default function SidebarMenu() {
     const { formData, listItems, handleInputChange, handleSave, } = useContext(AppContext);
 
     return (
-        <>
+        <div className='sidebar'>
             <div className="header"></div>
             <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
             <label htmlFor="openSidebarMenu" className="sidebarIconToggle">
@@ -85,6 +85,6 @@ export default function SidebarMenu() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

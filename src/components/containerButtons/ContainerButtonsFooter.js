@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { AppContext } from '../../server/AppContext';
 import './containerButtons.css'
 export default function ContainerButtonsFooter() {
-    const { formData, handleInputChange, handleReset } = useContext(AppContext);
+    const { formData, handleInputChange, handleReset, handleSearch } = useContext(AppContext);
 
     return (
         <div className='footer'>
@@ -38,7 +38,10 @@ export default function ContainerButtonsFooter() {
                     className="footer__Clear-btn"
                     onClick={handleReset}
                 >
-                    रह करा
+                    रद
+                </button>
+                <button className="footer__Search-btn" onClick={handleSearch}>
+                    शोधा
                 </button>
             </div>
         </div>

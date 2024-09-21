@@ -3,7 +3,7 @@ import { AppContext } from '../../server/AppContext';
 import './dataTable.css'
 import ContainerButtonsFooter from '../containerButtons/ContainerButtonsFooter';
 function DataTable() {
-    const { data } = useContext(AppContext);
+    const { records } = useContext(AppContext);
     return (
         <>
             <div className='dataTable'>
@@ -44,7 +44,7 @@ function DataTable() {
                             </tr>
                         </thead>
                         <tbody>
-                            {data.map((row, index) => (
+                            {records.map((row, index) => (
                                 <tr key={index} className="row">
                                     <td className="tableCells arrow">
 

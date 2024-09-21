@@ -148,7 +148,7 @@ export const AppProvider = ({ children }) => {
     const [currentIndex, setCurrentIndex] = useState(-1);
 
     const handleInputChange = (event) => {
-        console.log("Input Chsnge");
+        console.log("handle Input Change");
         const { name, value, type, checked } = event.target;
         const newValue = type === 'checkbox' ? checked : value;
         setFormData((prevFormData) => ({ ...prevFormData, [name]: newValue }));
@@ -172,8 +172,6 @@ export const AppProvider = ({ children }) => {
         }
         console.log(formData);
     };
-
-
     const handleSave = () => {
         console.log('handleSave');
         const updatedRecords = [...records];

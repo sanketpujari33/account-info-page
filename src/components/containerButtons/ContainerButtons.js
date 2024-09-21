@@ -8,7 +8,7 @@ export default function ContainerButtons() {
     return (
         <div className="container-btn">
             <div className="box">
-                <button onClick={handlePrev}>&lt;</button>
+                <button onClick={handlePrev}>&lt;&lt;</button>
             </div>
             <div className="box">
                 <button onClick={handlePrev}>&lt;</button>
@@ -27,7 +27,7 @@ export default function ContainerButtons() {
                 <button onClick={handleNext}>&gt;</button>
             </div>
             <div className="box">
-                <button onClick={handleNext}>&gt;</button>
+                <button onClick={handleNext}>&gt;&gt;</button>
             </div>
             <div className="box">
                 <button onClick={handleNew}>नवीन</button>
@@ -56,7 +56,7 @@ export default function ContainerButtons() {
                 />
             </div>
             <div className="box">
-                <button onClick={handleReset}>रह</button>
+                <button onClick={handleReset}>रद</button>
             </div>
             <div className="box">
                 <input
