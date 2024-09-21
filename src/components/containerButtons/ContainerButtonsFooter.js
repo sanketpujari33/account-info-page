@@ -1,44 +1,42 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../../server/AppContext';
 import './containerButtons.css'
 export default function ContainerButtonsFooter() {
-    const [searchCode, setSearchCode] = useState('');
-    const [memberNumber, setMemberNumber] = useState('');
-    const [center, setCenter] = useState('');
-
-    const handleSave = () => {
-        console.log("Saving data:", { searchCode, memberNumber, center });
-        setSearchCode('');
-        setMemberNumber('');
-        setCenter('');
-    };
+    const { setFormData, handleInputChange, handleReset } = useContext(AppContext);
 
     return (
         <div className='footer'>
             <div className='footer__search'>
                 <label className='footer__label'>शोधा कोड</label>
                 <input
-                    type='text'
+                    type="text"
+                    id="searchCode"
+                    name="searchCode"
                     className='footer__input-1'
-                    value={searchCode}
-                    onChange={(e) => setSearchCode(e.target.value)}
+                    value={setFormData.searchCode}
+                    onChange={handleInputChange}
                 />
                 <label className='footer__label'>सभासद न</label>
                 <input
-                    type='text'
+                    type="text"
+                    id="memberNumber"
+                    name="memberNumber"
                     className='footer__input'
-                    value={memberNumber}
-                    onChange={(e) => setMemberNumber(e.target.value)}
+                    value={setFormData.memberNumber}
+                    onChange={handleInputChange}
                 />
                 <label className='footer__label'>Center</label>
                 <input
-                    type='text'
+                    ype="text"
+                    id="center"
+                    name="center"
                     className='footer__input'
-                    value={center}
-                    onChange={(e) => setCenter(e.target.value)}
+                    value={setFormData.center}
+                    onChange={handleInputChange}
                 />
                 <button
                     className="footer__Clear-btn"
-                    onClick={handleSave}
+                    onClick={handleReset}
                 >
                     रह करा
                 </button>

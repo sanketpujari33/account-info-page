@@ -1,20 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../../server/AppContext';
 import './containerButtons.css'
 
-export default function ContainerButtons({ handlePrev, handleNext, handleNew, handleSave, handleResets }) {
-    const [inputValue1, setInputValue1] = useState('');
-    const [inputValue2, setInputValue2] = useState('');
-    const [inputValue3, setInputValue3] = useState('');
-    const [isDirectDebit, setIsDirectDebit] = useState(false);
-
-    const handleReset = () => {
-        handleResets();
-        setInputValue1('');
-        setInputValue2('');
-        setInputValue3('');
-        setIsDirectDebit(false);
-        console.log('Reset button clicked');
-    };
+export default function ContainerButtons() {
+    const { setFormData, handleInputChange, handleReset, handlePrev, handleNext, handleSave, handleNew } = useContext(AppContext);
 
     return (
         <div className="container-btn">
@@ -27,8 +16,11 @@ export default function ContainerButtons({ handlePrev, handleNext, handleNew, ha
             <div className="box">
                 <input
                     type="text"
-                    value={inputValue1}
-                    onChange={(e) => setInputValue1(e.target.value)}
+                    id="accountNumbers"
+                    name="accountNumbers"
+                    className="form-input form-input-accountNumbers"
+                    value={setFormData.accountNumbers}
+                    onChange={handleInputChange}
                 />
             </div>
             <div className="box">
@@ -46,16 +38,21 @@ export default function ContainerButtons({ handlePrev, handleNext, handleNew, ha
             <div className="box">
                 <input
                     type="text"
-                    value={inputValue2}
-                    onChange={(e) => setInputValue2(e.target.value)}
+                    id="Disbursement"
+                    name="Disbursement"
+                    className="form-input form-input-Disbursement"
+                    value={setFormData.Disbursement}
+                    onChange={handleInputChange}
                 />
             </div>
             <div className="box">
                 <input
                     type="text"
-                    value={inputValue3}
-                    placeholder='डिसीट करा'
-                    onChange={(e) => setInputValue3(e.target.value)}
+                    id="Decimate"
+                    name="Decimate"
+                    className="form-input form-input-Decimate"
+                    value={setFormData.Decimate}
+                    onChange={handleInputChange}
                 />
             </div>
             <div className="box">
@@ -63,9 +60,12 @@ export default function ContainerButtons({ handlePrev, handleNext, handleNew, ha
             </div>
             <div className="box">
                 <input
-                    type='checkbox'
-                    checked={isDirectDebit}
-                    onChange={() => setIsDirectDebit(!isDirectDebit)}
+                    type="checkbox"
+                    id="directdebit"
+                    name="directdebit"
+                    className="form-input form-input-checkbox"
+                    checked={setFormData.directdebit}
+                    onChange={handleInputChange}
                 />
                 <label>Direct Debit</label>
             </div>

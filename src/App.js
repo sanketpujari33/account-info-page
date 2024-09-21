@@ -1,10 +1,14 @@
-import AcountInfo from './Page/acountInfo/AcountInfo';
+import React from 'react';
+import AcountInfo from './pages/acountInfo/AcountInfo';
+import { AppProvider } from './server/AppContext';
 import './App.css'
 function App() {
 
   return (
     <>
-      <AcountInfo />
+      <AppProvider>
+        <AcountInfo />
+      </AppProvider>
     </>
   );
 }
