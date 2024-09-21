@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { AppContext } from '../../server/AppContext';
-import './DataTable.css'
+import './dataTable.css'
 import ContainerButtonsFooter from '../containerButtons/ContainerButtonsFooter';
 function DataTable() {
     const { data } = useContext(AppContext);
