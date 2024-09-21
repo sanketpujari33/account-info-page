@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../../server/AppContext';
 import './DataTable.css'
 import ContainerButtonsFooter from '../containerButtons/ContainerButtonsFooter';

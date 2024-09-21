@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../../server/AppContext';
 import './containerButtons.css'
 
 export default function ContainerButtons() {
-    const { setFormData, handleInputChange, handleReset, handlePrev, handleNext, handleSave, handleNew } = useContext(AppContext);
+    const { formData, handleInputChange, handleReset, handlePrev, handleNext, handleSave, handleNew } = useContext(AppContext);
 
     return (
         <div className="container-btn">
@@ -19,7 +19,7 @@ export default function ContainerButtons() {
                     id="accountNumbers"
                     name="accountNumbers"
                     className="form-input form-input-accountNumbers"
-                    value={setFormData.accountNumbers}
+                    value={formData.accountNumbers}
                     onChange={handleInputChange}
                 />
             </div>
@@ -41,7 +41,7 @@ export default function ContainerButtons() {
                     id="Disbursement"
                     name="Disbursement"
                     className="form-input form-input-Disbursement"
-                    value={setFormData.Disbursement}
+                    value={formData.Disbursement}
                     onChange={handleInputChange}
                 />
             </div>
@@ -51,7 +51,7 @@ export default function ContainerButtons() {
                     id="Decimate"
                     name="Decimate"
                     className="form-input form-input-Decimate"
-                    value={setFormData.Decimate}
+                    value={formData.Decimate}
                     onChange={handleInputChange}
                 />
             </div>
@@ -64,7 +64,7 @@ export default function ContainerButtons() {
                     id="directdebit"
                     name="directdebit"
                     className="form-input form-input-checkbox"
-                    checked={setFormData.directdebit}
+                    checked={formData.directdebit}
                     onChange={handleInputChange}
                 />
                 <label>Direct Debit</label>

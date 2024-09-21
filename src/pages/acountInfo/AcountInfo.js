@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './acountInfo.css'
 import SidebarMenu from '../../components/sidebarMenu/SidebarMenu'
 import FormInfo from '../../components/formInfo/FormInfo'

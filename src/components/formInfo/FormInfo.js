@@ -1,10 +1,10 @@
 import './formInfo.css';
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../../server/AppContext';
 import ContainerButtons from '../containerButtons/ContainerButtons';
 
 function FormInfo() {
-    const { formFields, setFormData, handleInputChange, handleSave } = useContext(AppContext);
+    const { formFields, formData, handleInputChange, handleSave } = useContext(AppContext);
     return (
         <>
             <div className='forms'>
@@ -22,7 +22,7 @@ function FormInfo() {
                                             id={field.name}
                                             name={field.name}
                                             className="form-input form-input-checkbox"
-                                            checked={setFormData[field.name]}
+                                            checked={formData[field.name]}
                                             onChange={handleInputChange}
                                         />
                                     ) : field.type === 'radio' ? (
@@ -34,7 +34,7 @@ function FormInfo() {
                                                     name={field.name}
                                                     value={option}
                                                     className="form-input form-input-radio"
-                                                    checked={setFormData[field.name] === option}
+                                                    checked={formData[field.name] === option}
                                                     onChange={handleInputChange}
                                                 />
                                                 <label htmlFor={`${field.name}${option}`} className={`form-label  form-label-${field.name}`}>
@@ -47,7 +47,7 @@ function FormInfo() {
                                             id={field.name}
                                             name={field.name}
                                             className={`form-input-select form-input-${field.name}`}
-                                            value={setFormData[field.name]}
+                                            value={formData[field.name]}
                                             onChange={handleInputChange}
                                         >
                                             {field.options.map((option) => (
@@ -62,7 +62,7 @@ function FormInfo() {
                                             id={field.name}
                                             name={field.name}
                                             className={`form-input form-input-${field.name}`}
-                                            value={setFormData[field.name]}
+                                            value={formData[field.name]}
                                             onChange={handleInputChange}
                                         />
                                     )

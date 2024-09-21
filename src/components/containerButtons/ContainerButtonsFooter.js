@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../../server/AppContext';
 import './containerButtons.css'
 export default function ContainerButtonsFooter() {
-    const { setFormData, handleInputChange, handleReset } = useContext(AppContext);
+    const { formData, handleInputChange, handleReset } = useContext(AppContext);
 
     return (
         <div className='footer'>
@@ -13,7 +13,7 @@ export default function ContainerButtonsFooter() {
                     id="searchCode"
                     name="searchCode"
                     className='footer__input-1'
-                    value={setFormData.searchCode}
+                    value={formData.searchCode}
                     onChange={handleInputChange}
                 />
                 <label className='footer__label'>सभासद न</label>
@@ -22,7 +22,7 @@ export default function ContainerButtonsFooter() {
                     id="memberNumber"
                     name="memberNumber"
                     className='footer__input'
-                    value={setFormData.memberNumber}
+                    value={formData.memberNumber}
                     onChange={handleInputChange}
                 />
                 <label className='footer__label'>Center</label>
@@ -31,7 +31,7 @@ export default function ContainerButtonsFooter() {
                     id="center"
                     name="center"
                     className='footer__input'
-                    value={setFormData.center}
+                    value={formData.center}
                     onChange={handleInputChange}
                 />
                 <button

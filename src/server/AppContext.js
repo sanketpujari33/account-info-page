@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import { createContext, useState } from 'react';
 import { data } from './data'
 export const AppContext = createContext();
 export const AppProvider = ({ children }) => {

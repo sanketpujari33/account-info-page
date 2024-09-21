@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../../server/AppContext';
 import './sidebarMenu.css';
 export default function SidebarMenu() {
-    const { setFormData, listItems, handleInputChange, handleSave, } = useContext(AppContext);
+    const { formData, listItems, handleInputChange, handleSave, } = useContext(AppContext);
 
     return (
         <>
@@ -21,7 +21,7 @@ export default function SidebarMenu() {
                                 type="checkbox"
                                 id="stopShowingAllDeductionsLeftByVeeraksha"
                                 name='stopShowingAllDeductionsLeftByVeeraksha'
-                                checked={setFormData.stopShowingAllDeductionsLeftByVeeraksha}
+                                checked={formData.stopShowingAllDeductionsLeftByVeeraksha}
                                 onChange={handleInputChange}
                             />
                             <label htmlFor="checkbox1">सर्व कपाती वीरक्षक बाकी दाखवणे बंद</label>
@@ -32,7 +32,7 @@ export default function SidebarMenu() {
                                 type="checkbox"
                                 id="stopShowingOutstandingBalances"
                                 name='stopShowingOutstandingBalances'
-                                checked={setFormData.stopShowingOutstandingBalances}
+                                checked={formData.stopShowingOutstandingBalances}
                                 onChange={handleInputChange}
                             />
                             <label htmlFor="checkbox2">अनागत शिल्लक बाकी दाखवणे बंद</label>
@@ -42,7 +42,7 @@ export default function SidebarMenu() {
                                 type="checkbox"
                                 name='advanceBalanceDueDaswaneOff'
                                 id="advanceBalanceDueDaswaneOff"
-                                checked={setFormData.advanceBalanceDueDaswaneOff}
+                                checked={formData.advanceBalanceDueDaswaneOff}
                                 onChange={handleInputChange}
                             />
                             <label htmlFor="checkbox3">अडव्हान्स शिल्लक बाकी दासवणे बंद</label>
@@ -79,7 +79,7 @@ export default function SidebarMenu() {
                             id="formName"
                             name="formName"
                             className='footer__name-input'
-                            value={setFormData.formName}
+                            value={formData.formName}
                             onChange={handleInputChange}
                         />
                     </div>
