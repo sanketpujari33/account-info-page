@@ -41,6 +41,7 @@ function DataTable() {
                                 <th className="tableHeader">ई-मेल</th>
                                 <th className="tableHeader">वय</th>
                                 <th className="tableHeader">लिंग</th>
+                                <th className="tableHeader">थेट डेबिट</th>
                                 <th className="tableHeader">सर्व कपाती वीरक्षक बाकी दाखवणे बंद</th>
                                 <th className="tableHeader">अनागत शिल्लक बाकी दाखवणे बंद</th>
                                 <th className="tableHeader">अडव्हान्स शिल्लक बाकी दासवणे बंद</th>
@@ -50,9 +51,7 @@ function DataTable() {
                         <tbody>
                             {records.map((row, index) => (
                                 <tr key={index} className="row">
-                                    <td className="tableCells arrow">
-
-                                    </td>
+                                    <td className="tableCells arrow"></td>
                                     <td className="tableCell">{row.accountNumbers}</td>
                                     <td className="tableCell">{row.accountConvenience ? 'Yes' : 'No'}</td>
                                     <td className="tableCell">{row.accountType}</td>
@@ -82,9 +81,10 @@ function DataTable() {
                                     <td className="tableCell">{row.accountEmail}</td>
                                     <td className="tableCell">{row.accountAge}</td>
                                     <td className="tableCell">{row.accountSex}</td>
-                                    <td className="tableCell">{row.stopShowingAllDeductionsLeftByVeeraksha}</td>
-                                    <td className="tableCell">{row.stopShowingOutstandingBalances}</td>
-                                    <td className="tableCell">{row.advanceBalanceDueDaswaneOff}</td>
+                                    <td className="tableCell">{row.directdebit ? 'Yes' : 'No'}</td>
+                                    <td className="tableCell">{row.stopShowingAllDeductionsLeftByVeeraksha ? 'Yes' : 'No'}</td>
+                                    <td className="tableCell">{row.stopShowingOutstandingBalances ? 'Yes' : 'No'}</td>
+                                    <td className="tableCell">{row.advanceBalanceDueDaswaneOff ? 'Yes' : 'No'}</td>
                                     <td className="tableCell">{row.formName}</td>
                                 </tr>
                             ))}

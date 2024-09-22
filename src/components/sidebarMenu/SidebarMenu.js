@@ -21,6 +21,7 @@ export default function SidebarMenu() {
                                 type="checkbox"
                                 id="stopShowingAllDeductionsLeftByVeeraksha"
                                 name='stopShowingAllDeductionsLeftByVeeraksha'
+                                className='stopShowingAllDeductionsLeftByVeeraksha'
                                 checked={formData.stopShowingAllDeductionsLeftByVeeraksha}
                                 onChange={handleInputChange}
                             />
@@ -32,6 +33,7 @@ export default function SidebarMenu() {
                                 type="checkbox"
                                 id="stopShowingOutstandingBalances"
                                 name='stopShowingOutstandingBalances'
+                                className='stopShowingOutstandingBalances'
                                 checked={formData.stopShowingOutstandingBalances}
                                 onChange={handleInputChange}
                             />
@@ -42,16 +44,13 @@ export default function SidebarMenu() {
                                 type="checkbox"
                                 name='advanceBalanceDueDaswaneOff'
                                 id="advanceBalanceDueDaswaneOff"
+                                className='advanceBalanceDueDaswaneOff'
                                 checked={formData.advanceBalanceDueDaswaneOff}
                                 onChange={handleInputChange}
                             />
                             <label htmlFor="checkbox3">अडव्हान्स शिल्लक बाकी दासवणे बंद</label>
                         </div>
-
-
-
                     </div>
-
                     <div className="list">
                         <ul>
                             {listItems.map((item) => (
