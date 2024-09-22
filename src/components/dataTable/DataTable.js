@@ -41,6 +41,10 @@ function DataTable() {
                                 <th className="tableHeader">ई-मेल</th>
                                 <th className="tableHeader">वय</th>
                                 <th className="tableHeader">लिंग</th>
+                                <th className="tableHeader">सर्व कपाती वीरक्षक बाकी दाखवणे बंद</th>
+                                <th className="tableHeader">अनागत शिल्लक बाकी दाखवणे बंद</th>
+                                <th className="tableHeader">अडव्हान्स शिल्लक बाकी दासवणे बंद</th>
+                                <th className="tableHeader">फॉर्मचे नाव</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -78,6 +82,10 @@ function DataTable() {
                                     <td className="tableCell">{row.accountEmail}</td>
                                     <td className="tableCell">{row.accountAge}</td>
                                     <td className="tableCell">{row.accountSex}</td>
+                                    <td className="tableCell">{row.stopShowingAllDeductionsLeftByVeeraksha}</td>
+                                    <td className="tableCell">{row.stopShowingOutstandingBalances}</td>
+                                    <td className="tableCell">{row.advanceBalanceDueDaswaneOff}</td>
+                                    <td className="tableCell">{row.formName}</td>
                                 </tr>
                             ))}
                         </tbody>
