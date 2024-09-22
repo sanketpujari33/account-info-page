@@ -1,3 +1,4 @@
+import './dataTable.css'
 import { useContext } from 'react';
 import { AppContext } from '../../server/AppContext';
 import ContainerButtonsFooter from '../containerButtons/ContainerButtonsFooter';
