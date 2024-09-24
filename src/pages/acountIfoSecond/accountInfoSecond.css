@@ -1,0 +1,237 @@
+.second-info-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 100px; */
+}
+
+.form-filed {
+    height: 100%;
+    width: 70%;
+    border-radius: 30px;
+    padding: 30px;
+    border: 2px solid gray;
+    background-color: rgba(158, 163, 163, 0.459);
+}
+
+.form-elements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3px;
+    justify-content: space-between;
+}
+
+.form-elements label {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+
+.form-elements input {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.form-field-accountName,
+.form-field-address {
+    margin-left: 5%;
+}
+
+.form-input-accountName,
+.form-input-accountNameEnglish {
+    width: 200px;
+}
+
+.form-input-address {
+    width: 500px;
+}
+
+.form-field-accountConvenience {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.form-input-accountType {
+    width: 150px;
+    padding: 7px;
+    border-radius: 6px;
+}
+
+.form-field-memberNo {
+    margin-left: 9px;
+}
+
+.form-field-accountPhone {
+    margin-left: 60px;
+}
+
+.form-input-memberNo,
+.form-input-accountDate,
+.form-input-accountMobile,
+.form-input-accountPhone,
+.form-input-accountVillage,
+.form-input-accountTaluka {
+    width: 145px;
+}
+
+.form-input-deposit,
+.form-input-commission,
+.form-input-rebateCommission,
+.form-input-accountRoute,
+.form-input-freightNo {
+    width: 100px;
+}
+
+.form-field-accountTypeRadio,
+.form-field-accountTypeMember {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-label-accountTypeRadio,
+.form-label-accountTypeMember {
+    grid-column: auto/ span 2;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-field-accountTypeRadio {
+    background: linear-gradient(to right, rgba(182, 182, 92, 0.644), #dba8399d);
+    border-radius: 15px 0px 0px 15px;
+}
+
+.form-field-accountTypeMember {
+    background: linear-gradient(to right, #aca8a8b9, rgba(236, 223, 39, 0.493));
+    border-radius: 0px 15px 15px 0px;
+}
+
+.form-input-accountSex,
+.form-input-rateSheet,
+.form-input-accountCaste,
+.form-input-accountStates {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(168, 164, 164, 0.527);
+}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {
+
+    .form-input-address {
+        width: 200px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .form-input-address {
+        width: 120px;
+    }
+
+    .form-input-accountName,
+    .form-input-accountNameEnglish {
+        width: 150px;
+    }
+
+    .form-elements input {
+        padding: 3px;
+        border-radius: 5px;
+        width: 100px;
+    }
+
+    .form-elements {
+        gap: 1px;
+    }
+
+    .form-field-accountName,
+    .form-field-address {
+        margin-left: 0%;
+    }
+
+    .form-elements {
+        justify-content: space-between;
+    }
+
+    .form-field-accountTypeRadio {
+        background: linear-gradient(to right, rgba(182, 182, 92, 0.644), #dba8399d);
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    .form-field-accountTypeMember {
+        background: linear-gradient(to right, #aca8a8b9, rgba(236, 223, 39, 0.493));
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    .form-elements label {
+        font-size: 12px;
+        margin-bottom: 5px;
+        margin-right: 2px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .form-elements {
+        flex-direction: column;
+        /* gap: 5px; */
+        width: 100%;
+        padding: 0%;
+        margin-bottom: 20px;
+    }
+
+    .form-field {
+        padding: 0%;
+        display: flex;
+        width: 100%;
+        /* align-items: center; */
+        /* justify-content: space-between; */
+        /* flex-wrap: nowrap; */
+    }
+
+    .form-elements label {
+        width: 30%;
+        font-size: 12px;
+        /* padding-right: 10%; */
+    }
+
+    .form-field input {
+        width: 60%;
+    }
+
+    .form-field-accountPhone {
+        margin-left: 0%;
+    }
+
+    .form-input-accountSex,
+    .form-input-rateSheet,
+    .form-input-accountCaste,
+    .form-input-accountStates {
+        width: 150px;
+    }
+
+    .form-field-accountConvenience {
+        display: inline-block;
+    }
+
+    .form-input-checkbox {
+        width: 0%;
+    }
+
+}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 360px) {}
